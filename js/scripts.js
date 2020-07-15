@@ -1,4 +1,6 @@
-(function ($) {
+addtoggle = null;
+$(window).ready(function () {
+  var click = true;
   "use strict";
   // Collapse Navbar
   $(window).scroll(function () {
@@ -8,8 +10,17 @@
       $("#mainNav").removeClass("navbar-scrolled");
     }
   });
-  // var slides = document.getElementsByClassName("boxSliderImg");
-  // for (slide of slides) {
 
-  // }
-})(jQuery); // End of use strict
+  addtoggle = function () {
+    var lista = document.getElementById("mainNav").classList.contains("navbar-scrolled");
+    if (lista) {
+      $("#mainNav").removeClass("navbar-scrolled");
+    } else {
+      $("#mainNav").addClass("navbar-scrolled");
+    }
+  }
+
+})
+// (function ($) {
+
+// })(jQuery); // End of use strict
